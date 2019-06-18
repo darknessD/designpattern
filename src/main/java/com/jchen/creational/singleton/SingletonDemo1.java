@@ -1,4 +1,4 @@
-package com.jchen.singleton;
+package com.jchen.creational.singleton;
 
 //饿汉单例
 public class SingletonDemo1 {

@@ -1,4 +1,4 @@
-package com.jchen.singleton;
+package com.jchen.creational.singleton;
 
 //使用静态代码块初始化的饿汉单例
 public class SingletonDemo2 {

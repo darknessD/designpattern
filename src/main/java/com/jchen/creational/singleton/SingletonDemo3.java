@@ -1,4 +1,4 @@
-package com.jchen.singleton;
+package com.jchen.creational.singleton;
 
 //线程不安全的懒汉单例模式
 public class SingletonDemo3 {

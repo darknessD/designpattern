@@ -1,4 +1,4 @@
-package com.jchen.singleton;
+package com.jchen.creational.singleton;
 
 //使用静态内部类的单例模式
 public class SingletonDemo6 {
