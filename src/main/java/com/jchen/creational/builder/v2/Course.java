@@ -17,6 +17,7 @@ public class Course {
                 ", courseQA='" + courseQA + '\'' +
                 '}';
     }
+    //使用private方法，拒绝从外部直接new对象，必须要通过builder
     private Course(CourseBuilder courseBuilder){
         this.courseName = courseBuilder.courseName;
         this.courseVideo = courseBuilder.courseVideo;
@@ -33,6 +34,7 @@ public class Course {
         private String courseArticle;
         private String courseQA;
 
+        //返回自身可以进行链式调用
         public CourseBuilder buildCourseName(String courseName){
             this.courseName  = courseName;
             return this;
