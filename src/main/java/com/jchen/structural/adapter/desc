@@ -1,0 +1,17 @@
+Def: 将一个类的接口转化成客户期待的另一个接口，使原本接口不兼容的类可以一起工作
+
+
+最后，在简要说下适配器模式和装饰模式以及代理模式的关系。
+
+装饰模式 ( Decorator )。前面也提到过，是通过对一个已有对象的进一步分装来实现功能上的扩展。这个相对于类扩展继承更为动态化，是基于已有对象而非类的扩展。
+代理模式 ( Proxy )。也是通过对一个对象的“封装”，“屏蔽”掉client请求对真实原始对象的直接调用，来增加做访问控制方面的处理逻辑。
+单纯从类和对象结构上来看，装饰模式、代理模式和适配器模式（尤其是对象的实现方式）大有相似之处。但之所以这几个是不同的设计模式，是我们设计考虑的出发点和细节不同，从描述中也可以看得出来。
+
+适配器模式偏重的是适配，即实现要适配的接口功能。装饰模式偏重的是对已有对象的功能扩展。而代理模式则偏重的是访问逻辑的控制，因此通常这个代理的构建过程是不直接由client控制的。
+
+在JDK中的使用：
+FileReader和FileWriter分别继承了InputStreamReader和OutputStreamWriter
+
+InputStreamReader和OutputStreamWriter分别继承自Reader和Writer
+InputStreamReader和OutputStreamWriter分别持有InputStream和OutputStream
+所以这两个类就是使用了适配器模式，使InputStream和OutputStream可以适配Read和Writer接口
